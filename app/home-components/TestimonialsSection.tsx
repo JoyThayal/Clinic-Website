@@ -81,7 +81,7 @@ export default function TestimonialsSection() {
   return (
     <section
       id="testimonials"
-      className="scroll-mt-32 w-full bg-[#071630] py-14 sm:py-20 lg:py-28 overflow-hidden"
+      className="scroll-mt-20 w-full bg-[#071630] py-14 sm:py-20 lg:py-28 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header with Navigation Controls */}

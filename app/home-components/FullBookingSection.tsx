@@ -14,6 +14,9 @@ export default function FullBookingSection() {
     notes: "",
   });
 
+  // ক্লিনিকের WhatsApp নম্বর (কান্ট্রি কোড সহ, '+' বা স্পেস ছাড়া)
+  const CLINIC_WHATSAPP_NUMBER = "919876543210"; // তোমার ক্লায়েন্টের আসল নম্বর এখানে দেবে
+
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
@@ -24,13 +27,32 @@ export default function FullBookingSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Full Appointment Details Submitted:", formData);
+
+    // বিস্তারিত ও গোছানো WhatsApp মেসেজ
+    const message =
+      ` *Comprehensive Dental Appointment Request* \n\n` +
+      ` *Patient Name:* ${formData.name}\n` +
+      ` *Phone Number:* ${formData.phone}\n` +
+      ` *Treatment Type:* ${formData.appointmentType || "Not Specified"}\n` +
+      ` *Preferred Doctor:* ${formData.dentist}\n` +
+      ` *Date:* ${formData.date}\n` +
+      ` *Time:* ${formData.time}\n` +
+      (formData.notes.trim()
+        ? ` *Special Notes:* ${formData.notes}\n\n`
+        : `\n`) +
+      `_Submitted via Dental Clinic Website_`;
+
+    const whatsappUrl = `https://wa.me/${CLINIC_WHATSAPP_NUMBER}?text=${encodeURIComponent(
+      message,
+    )}`;
+
+    window.open(whatsappUrl, "_blank");
   };
 
   return (
     <section
       id="booking-full"
-      className="scroll-mt-32 w-full bg-[#f8fbff] py-14 sm:py-20 lg:py-28 overflow-hidden"
+      className="scroll-mt-24 sm:scroll-mt-28 w-full bg-[#f8fbff] py-14 sm:py-20 lg:py-28 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Header Row */}
@@ -70,7 +92,7 @@ export default function FullBookingSection() {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="Ex. John Doe"
+                    placeholder="Enter Your Full Name"
                     className="w-full px-4 py-3 sm:py-3.5 rounded-2xl bg-white border border-slate-200/80 text-sm font-medium text-slate-800 placeholder-slate-400 focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100 transition-all shadow-sm"
                     required
                   />
@@ -191,13 +213,13 @@ export default function FullBookingSection() {
                 />
               </div>
 
-              {/* Submit Button: মোবাইলে ফুল-উইডথ */}
+              {/* Submit Button */}
               <div className="pt-2 w-full sm:w-auto">
                 <button
                   type="submit"
-                  className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-blue-600 hover:bg-blue-700 active:scale-95 text-white font-medium text-sm transition-all shadow-md shadow-blue-600/20"
+                  className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-blue-600 hover:bg-blue-700 active:scale-95 text-white font-medium text-sm transition-all shadow-md shadow-blue-600/20 cursor-pointer"
                 >
-                  Book an Appointment
+                  Book an Appointment via WhatsApp
                 </button>
               </div>
             </form>

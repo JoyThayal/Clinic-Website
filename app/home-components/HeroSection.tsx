@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -15,7 +14,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative w-full bg-white pt-10 sm:pt-16 lg:pt-20 pb-12 overflow-hidden"
+      className="scroll-mt-24 relative w-full bg-white pt-10 sm:pt-16 lg:pt-20 pb-12 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Main Grid */}
@@ -44,7 +43,7 @@ export default function HeroSection() {
             {/* High-Converting CTA Buttons */}
             <div className="flex flex-wrap items-center gap-4 sm:gap-5 pt-2">
               <Link
-                href="#booking"
+                href="#booking-full"
                 className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-blue-600 hover:bg-blue-700 active:scale-95 text-white font-medium text-sm transition-all shadow-md shadow-blue-600/25"
               >
                 <CalendarCheck className="w-4 h-4" />
@@ -84,11 +83,11 @@ export default function HeroSection() {
               <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl bg-slate-100 border border-slate-100">
                 <Image
                   src="/images/hero.png"
-                  alt="Dental Specialist"
+                  alt="Dental Hero"
                   fill
-                  sizes="(max-width: 768px) 100vw, 400px"
-                  className="object-cover object-top"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                   priority
+                  className="object-contain"
                 />
               </div>
 

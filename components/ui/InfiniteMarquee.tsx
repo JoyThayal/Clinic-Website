@@ -32,9 +32,10 @@ export default function InfiniteMarquee() {
               {/* Dater Image Container */}
               <div className="relative w-8 h-8 shrink-0">
                 <Image
-                  src="/images/tooth.png" // Tomar dater chobir path ekhane boshabe
+                  src="/images/tooth.png"
                   alt="Tooth Icon"
                   fill
+                  sizes="32px"
                   className="object-contain"
                 />
               </div>
@@ -59,9 +60,10 @@ export default function InfiniteMarquee() {
               {/* Dater Image Container */}
               <div className="relative w-8 h-8 shrink-0">
                 <Image
-                  src="/images/tooth.png" // Tomar dater chobir path ekhane boshabe
+                  src="/images/tooth.png"
                   alt="Tooth Icon"
                   fill
+                  sizes="32px"
                   className="object-contain"
                 />
               </div>

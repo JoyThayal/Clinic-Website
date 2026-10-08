@@ -51,7 +51,7 @@ export default function ServicesSection() {
   return (
     <section
       id="services"
-      className="scroll-mt-32 w-full bg-[#fcfdff] py-14 sm:py-16 lg:py-24 overflow-hidden"
+      className="scroll-mt-20 w-full bg-[#fcfdff] py-14 sm:py-16 lg:py-24 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Row: মোবাইলে টাইটেল ও বাটন সুন্দরভাবে সাজানো */}
@@ -104,6 +104,7 @@ export default function ServicesSection() {
                         src={service.icon}
                         alt="Service Icon"
                         fill
+                        sizes="20px"
                         className="object-contain"
                       />
                     </div>

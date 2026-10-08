@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Phone, Mail, MapPin, Menu, X } from "lucide-react";
@@ -15,13 +15,11 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: "Home", href: "#home" },
     { name: "About Us", href: "#about" },
     { name: "Services", href: "#services" },
-    { name: "Doctor", href: "#dentist" },
-    { name: "Case Stories", href: "#cases" },
-    { name: "FAQs", href: "#faqs" },
+    { name: "Our Doctor", href: "#dentist" },
     { name: "Testimonials", href: "#testimonials" },
+    { name: "FAQs", href: "#faqs" },
   ];
 
   const socialLinks = [
@@ -39,11 +37,11 @@ export default function Navbar() {
           {/* Contact Details */}
           <div className="flex items-center gap-3 sm:gap-6 truncate">
             <a
-              href="tel:0000000000"
+              href="tel:+91 9876543210"
               className="inline-flex items-center gap-1.5 hover:text-blue-100 transition-colors shrink-0"
             >
               <Phone className="w-3.5 h-3.5 text-blue-200" />
-              <span>(000) 000-0000</span>
+              <span>+91 9876543210</span>
             </a>
 
             <a
@@ -56,7 +54,7 @@ export default function Navbar() {
 
             <div className="hidden xl:flex items-center gap-1.5 text-blue-100">
               <MapPin className="w-3.5 h-3.5 text-blue-200 shrink-0" />
-              <span>2464 Royal Ln. Mesa, New Jersey 45463</span>
+              <span>Madhyamgram, Kolkata, West Bengal - 70013</span>
             </div>
           </div>
 

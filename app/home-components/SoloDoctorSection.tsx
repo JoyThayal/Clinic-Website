@@ -16,7 +16,7 @@ export default function SoloDoctorSection() {
   return (
     <section
       id="dentist"
-      className="scroll-mt-32 w-full bg-white py-14 sm:py-16 lg:py-24 overflow-hidden"
+      className="scroll-mt-20 w-full bg-white py-14 sm:py-16 lg:py-24 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -41,7 +41,6 @@ export default function SoloDoctorSection() {
                 fill
                 sizes="(max-width: 1024px) 100vw, 400px"
                 className="object-cover object-top"
-                priority
               />
 
               {/* Experience Badge: মোবাইলে সুন্দরভাবে ফিট হওয়ার জন্য রেসপন্সিভ প্যাডিং */}

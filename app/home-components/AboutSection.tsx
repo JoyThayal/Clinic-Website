@@ -15,7 +15,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="scroll-mt-32 w-full bg-white py-12 sm:py-16 lg:py-24 overflow-hidden"
+      className="scroll-mt-20 w-full bg-white py-12 sm:py-16 lg:py-24 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
@@ -27,7 +27,6 @@ export default function AboutSection() {
                 src="/images/about-tooth-graphic.png"
                 alt="15 Years of Expertise in Dental Care"
                 fill
-                priority
                 sizes="(max-width: 640px) 280px, (max-width: 1024px) 420px, 460px"
                 className="object-contain"
               />
