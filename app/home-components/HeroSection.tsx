@@ -14,7 +14,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="scroll-mt-24 relative w-full bg-white pt-10 sm:pt-16 lg:pt-20 pb-12 overflow-hidden"
+      className="scroll-mt-24 relative w-full bg-white pt-10 pb-12 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Main Grid */}
